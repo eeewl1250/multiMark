@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>两栏型markdown</title>
+    <meta charset="UTF-8" />
+    <style>
+        body {
+            margin: 0;
+        }
+        .note-header {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: #efefef;
+        }
+        .note-btns {
+            float: left;
+            height: 20px;
+            line-height: 20px;
+        }
+        .note-cont {
+            width: 90%;
+            margin: 40px auto 0 auto;
+            box-shadow: 0 0 0 1px #efefef, 0 0 10px 1px #efefef;
+        }
+        .column {
+            float: left;
+            width: 49.9%;
+        }
+        #editor,
+        #preview {
+            overflow-y: scroll;
+        }
+        textarea {
+            width: 95%;
+            border: none;
+            resize: none;
+        }
+    </style>
+</head>
+<body>
+<div class="note-header">
+    <div id="markdown-btns" class="note-btns">加粗 斜线</div>
+    <div id="function-btns" class="note-btns">关闭 导出</div>
+</div>
+<div class="note-cont">
+    <div class="column">
+        <textarea id="editor"></textarea>
+    </div>
+    <div id="preview" class="column">111</div>
+</div>
+<script src="src/markdown.js"></script>
+</body>
+</html>
